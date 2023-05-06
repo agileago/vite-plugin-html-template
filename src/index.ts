@@ -112,9 +112,8 @@ export default function htmlTemplate(userOptions: UserOptions = {}): Plugin {
     /** for dev */
     load(id) {
       if (
-        isWin32
-          ? id.startsWith(resolve('').replace(/\\/g, '/')) && id.endsWith('.html')
-          : id.startsWith(PREFIX)
+        id.startsWith(PREFIX) ||
+        (isWin32 && id.startsWith(resolve('').replace(/\\/g, '/')) && id.endsWith('.html'))
       ) {
         const idNoPrefix = id.slice(PREFIX.length)
         // resolveId checked isWin32 already
