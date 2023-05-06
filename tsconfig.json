@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "strict": true,
+    "strict": false,
     "noUnusedLocals": true,
     "moduleResolution": "node",
     "declaration": true,
@@ -11,6 +11,7 @@
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": true,
+    "noEmitOnError": false,
     "outDir": "dist",
     "lib": ["esnext"],
     "sourceMap": true

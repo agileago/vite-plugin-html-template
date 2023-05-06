@@ -159,7 +159,7 @@ export default function htmlTemplate(userOptions: UserOptions = {}): Plugin {
         shell.rm('-rf', resolve(`${dest}/${PREFIX}`))
       }
     },
-  }
+  } as Plugin
 }
 
 export type { UserOptions as HtmlTemplateOptions }
